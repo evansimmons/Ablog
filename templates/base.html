@@ -1,12 +1,35 @@
 <!-- templates/base.html-->
 <html>
     <head>
+        {% load django_simple_bulma %}
+        {% bulma %}
+        {% font_awesome %}
+        {% load static %}
+        <meta charset="utf-8">
+        <link rel='stylsheet' href="{% static 'bulma/css/bulma.min.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> etsCodelancer B Log</title>
     </head>
+
 <body>
-    <header>
-        <h1><a href="{% url 'home' %}"> etsCodelancer B Log</h1>
-    </header>
+
+    <!--<section class='hero is-primary'>
+        <div class='hero-body'>
+            <p class='title' ><a href="{% url 'home' %}"> Ets Blog</a></p>
+            <p class='subtitle'> test </p>
+        </div>
+    </section> -->
+    <section class="hero">
+        <div class="hero-body">
+            <p class="title">
+            Evan's Blog title
+            </p>
+            <p class="subtitle">
+            a blog that is bloggerific
+            </p>
+        </div>
+    </section>
+    
     <div>
         {% block content %}
 
